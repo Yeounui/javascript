@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<!--body: HTML의 문서 내용 가리킴. 한 문서에 하나만 존재-->
+<body>
+
+  <p>스크립트 전</p>
+  <!--
+  script: 요즘엔 사용 잘 안함.
+  HTML4에선 type을 명시하는 것이 필수였음. type="text/javascript"
+  이젠 타입 명시가 필수가 아님. 모던 HTML 표준에선 속성 의미가 바뀌었음.
+  
+  <script type="text/javascript"><\!--...--\></script>
+  주석은 <script> 태그를 처리 못하는 브라우저가 해당 스크립트를 못 읽게 하려 사용했음.
+  -->
+  <script>
+    alert( 'Hello, world!' );
+  </script>
+
+  <!--
+    <script src="/path/to/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    HTML 안 직접 스크립트를 작성: 스크립트가 아주 간단할 때; 별개의 분리된 파일은 긴 스크립트.
+
+    src 속성과 내부 코드를 동시에 가지지 못함. 아래 코드 실행 불가.
+  -->
+<script src="file.js">
+  alert(1); // src 속성이 사용되었으므로 이 코드는 무시됩니다.
+</script>
+  <p>스크립트 후</p>
+
+</body>
+
+</html>
